@@ -1,0 +1,119 @@
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  margin: 0;
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+
+}
+
+/* NAVBAR */
+
+nav {
+
+  background-color: rgb(124,191,23);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.logo {
+
+  color: rgb(94,43,11);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 3px solid rgb(94,43,11);
+  border-radius: 3px;
+  padding: 2.5px 5px;
+
+}
+
+.logo:hover {
+
+  color: rgb(124,191,23);
+  border: 3px solid rgb(124,191,23);
+  background-color: rgb(94,43,11);
+  outline: 3px solid rgb(94,43,11);
+
+}
+
+.logo:active {
+
+  color: rgb(94,43,11);
+  background-color: inherit;
+  border: 3px solid rgb(94,43,11);
+  outline: none;
+
+}
+
+form {
+
+  padding: 8px 0;
+
+}
+
+input[type="text"] {
+
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: Muli, sans-serif;
+  border: 2px solid rgb(124,191,23)
+  border-radius: 5px;
+
+}
+
+input[type="text"]:focus {
+
+  border: 2px solid rgb(94,43,11);
+  outline: none;
+
+}
+
+nav input[type="submit"] {
+
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-family: Muli, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 2px solid rgb(124,191,23)
+  border-radius: 5px;
+
+}
+
+/* LISTA RESULTADOS */
+
+main h2 {
+
+  width: 60%;
+  margin: auto;
+  padding: 20px 40px;
+  font-size: 2rem;
+  font-family: Muli, sans-serif;
+
+}
+
+/* RESULTADO */
+
+.resultado-container {
+
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid black;
+
+}
+
+
