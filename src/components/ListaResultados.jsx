@@ -6,7 +6,7 @@ const ListaResultados = () => {
     const {listaPeliculas} = useBuscadorContext()
 
   return (
-    <div>
+    <div className='container-resultados'>
       {
         listaPeliculas.map ( pelicula => (
 
