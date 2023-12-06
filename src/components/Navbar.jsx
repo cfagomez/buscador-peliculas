@@ -1,9 +1,9 @@
-import React from 'react'
 import useBuscadorContext from '../hooks/useBuscadorContext'
+import Error from './Error'
 
 const Navbar = () => {
 
-    const {titulo, buscarPelicula, handleChangeTitulo} = useBuscadorContext()
+    const {titulo, validarFormulario, handleChangeTitulo, error} = useBuscadorContext()
 
   return (
     <nav>
@@ -11,12 +11,23 @@ const Navbar = () => {
             href="#"
             className='logo'
         >
-            Minamon
+            Minamón
         </a>
         <div>
             <form
-                onSubmit={buscarPelicula}
+                onSubmit={validarFormulario}
             >
+                {
+                    error ? (
+
+                        <Error />
+
+                    ) : (
+
+                        null
+
+                    )
+                }
                 <input 
                     type="text" 
                     placeholder='Buscar...'

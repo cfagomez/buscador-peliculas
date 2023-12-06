@@ -9,12 +9,9 @@ const BuscadorProvider = ({children}) => {
     const [listaPeliculas, setListaPeliculas] = useState([])
     const [datosPelicula, setDatosPelicula] = useState([])
     const [modal, setModal] = useState(false)
+    const [error, setError] = useState(false)
 
-    const buscarPelicula = async (e) => {
-
-        e.preventDefault()
-
-        setTitulo('')
+    const buscarPelicula = async () => {
 
         try {
 
@@ -25,6 +22,27 @@ const BuscadorProvider = ({children}) => {
         } catch (error) {
 
             console.log(error)
+
+        }
+
+    }
+
+    const validarFormulario = (e) => {
+
+        e.preventDefault()
+
+        if (!titulo.trim()) {
+
+            setError('¡Debes completar el campo!')
+
+            return
+
+        } else {
+
+            buscarPelicula()
+
+            setError('')
+            setTitulo('')
 
         }
 
@@ -54,7 +72,7 @@ const BuscadorProvider = ({children}) => {
     }
 
   return (
-    <BuscadorContext.Provider value={{titulo, buscarPelicula, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal}}>
+    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error}}>
         {children}
     </BuscadorContext.Provider>
   )

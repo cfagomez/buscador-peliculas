@@ -46,7 +46,7 @@ form {
 input[type="text"] {
 
   padding: 5px 10px;
-  margin-right: 2px;
+  margin-right: 1px;
   font-size: 1rem;
   font-family: Muli, sans-serif;
   border: 2px solid rgb(1, 41, 95);
@@ -80,6 +80,16 @@ nav input[type="submit"]:hover {
 
   border: 2px solid rgb(253, 21, 27);
   color: rgb(253, 21, 27);
+
+}
+
+.error-message-container {
+
+  margin-right: 1px;
+  background-color: rgb(253, 21, 27);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: rgb(255,255,255);
 
 }
 
@@ -220,11 +230,44 @@ main h2 {
 
   background-color: rgb(255,255,255);
   margin: auto;
-  padding: 25px 0;
+  padding: 25px 25px;
   border: 1px outset rgb(40, 40, 40);
   border-radius: 5px;
-  width: 40%;
+  width: 75%;
   box-shadow: 0px 10px 33px -17px rgba(173,173,173,1);
+  text-align: left;
+
+}
+
+.modal-content h2 {
+
+  font-size: 2rem;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+
+}
+
+.datos-container {
+
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  text-align: start;
+  margin-bottom: 20px;
+
+}
+
+.datos-container p {
+
+  margin: 0;
+  font-weight: 700;
+
+}
+
+.modal-content img {
+
+  border-radius: 5px;
 
 }
 
