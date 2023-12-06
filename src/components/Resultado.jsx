@@ -15,9 +15,9 @@ const Resultado = ({pelicula}) => {
           height="200"
         />
         <div>
-          <p>{Title}</p>
-          <p className="type">{Type}</p>
-          <p>{Year}</p>
+          <p className='p-title'>{Title}</p>
+          <p className="p-type capitalize">{Type}</p>
+          <p className='p-year'>{Year}</p>
         </div>
       </div>
       <button 
