@@ -1,6 +1,9 @@
+import useBuscadorContext from '../hooks/useBuscadorContext'
+
 const Resultado = ({pelicula}) => {
 
     const {Poster, Title, Type, Year} = pelicula
+    const {obtenerDatosPelicula} = useBuscadorContext()
 
   return (
     <div className="resultado-container">
@@ -20,6 +23,7 @@ const Resultado = ({pelicula}) => {
       <button 
         type="button"
         className="btn-ver-mas"
+        onClick={() => obtenerDatosPelicula(Title)}
       >
         Ver más
       </button>
