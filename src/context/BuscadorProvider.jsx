@@ -10,6 +10,7 @@ const BuscadorProvider = ({children}) => {
     const [datosPelicula, setDatosPelicula] = useState([])
     const [modal, setModal] = useState(false)
     const [error, setError] = useState(false)
+    const [generos, setGeneros] = useState([])
 
     const buscarPelicula = async () => {
 
@@ -57,6 +58,10 @@ const BuscadorProvider = ({children}) => {
             setModal(true)
             setDatosPelicula(data)
 
+            let generos = data.Genre
+            const arrayGeneros = generos.split(',')
+            setGeneros(arrayGeneros)
+
         } catch (error) {
 
             console.log(error)
@@ -71,8 +76,14 @@ const BuscadorProvider = ({children}) => {
 
     }
 
+    const cerrarModal = () => {
+
+        setModal(false)
+
+    }
+
   return (
-    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error}}>
+    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal}}>
         {children}
     </BuscadorContext.Provider>
   )
