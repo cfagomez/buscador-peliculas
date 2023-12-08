@@ -13,6 +13,12 @@ body {
 
 }
 
+h1, h2, h3 {
+
+  font-family: "Space Mono", monospace;
+
+}
+
 /* NAVBAR */
 
 nav {
@@ -93,15 +99,74 @@ nav input[type="submit"]:hover {
 
 }
 
+/* PAGINA PRINCIPAL */
+
+.pagina-principal-container {
+
+  width: 50%;
+  margin: 50px auto 0 auto;
+  font-weight: 900;
+  text-align: center;
+
+}
+
+.pagina-principal-container h2 {
+
+  font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+
+}
+
+.pagina-principal-container div {
+
+  text-align: center;
+
+}
+
+.pagina-principal-container p {
+
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 5px 0 5px 0;
+  color: rgba(0, 0, 0, 0.664);
+
+}
+
+.inst-1 {
+
+  color: rgb(67,127,151);
+
+}
+
+.inst-2 {
+
+ color: rgb(132,147,36);
+
+}
+
+.inst-3 {
+
+  color: rgb(255,179,15);
+
+}
+
+.inst-4 {
+
+  color: rgb(253, 21, 27);
+
+}
+
 /* LISTA RESULTADOS */
 
 main h2 {
 
-  width: 60%;
   margin: auto;
   padding: 20px 40px;
   font-size: 2rem;
-  font-family: Muli, sans-serif;
 
 }
 
@@ -236,7 +301,7 @@ main h2 {
   padding: 25px 25px;
   border: 1px outset rgb(40, 40, 40);
   border-radius: 5px;
-  width: 55%;
+  width: 50%;
   box-shadow: 0px 10px 33px -17px rgba(173,173,173,1);
   text-align: left;
 
@@ -244,12 +309,12 @@ main h2 {
 
 .title {
 
-  width: 100%;
   font-size: 2rem;
   font-weight: 700;
   padding: 0;
   margin: 0;
   text-align: left;
+  line-height: 1;
 
 }
 
@@ -257,9 +322,9 @@ main h2 {
 
   background-color: rgb(255,179,15);
   border-radius: 50px;
-  padding: 10px;
+  padding: 15px;
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 15px 0 10px 0;
 
@@ -314,6 +379,7 @@ img {
 
   font-weight: 700;
   margin-bottom: 20px;
+  line-height: 1.6;
 
 }
 
@@ -334,6 +400,7 @@ color: rgb(0, 0, 0);
 
   align-self: center;
   padding: 5px 10px;
+  margin-top: 20px;
   font-size: 1.25rem;
   font-family: Muli, sans-serif;
   font-weight: 900;
