@@ -169,11 +169,26 @@ nav input[type="submit"]:hover {
 
 /* LISTA RESULTADOS */
 
-main h2 {
+.p-resultados-container {
 
-  margin: auto;
+  width: 60%;
+  margin: 0 auto 25px;
+
+
+}
+
+.p-resultados {
+
+  text-align: left;
   padding: 20px 40px;
-  font-size: 2rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+
+}
+
+.p-resultados span {
+
+  font-weight: 700;
 
 }
 

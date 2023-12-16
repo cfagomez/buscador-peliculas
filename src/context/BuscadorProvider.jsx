@@ -6,6 +6,7 @@ export const BuscadorContext = createContext()
 const BuscadorProvider = ({children}) => {
 
     const [titulo, setTitulo] = useState('')
+    const [titulo2, setTitulo2] = useState('')
     const [listaPeliculas, setListaPeliculas] = useState([])
     const [datosPelicula, setDatosPelicula] = useState([])
     const [modal, setModal] = useState(false)
@@ -26,6 +27,7 @@ const BuscadorProvider = ({children}) => {
             if (data.Response === 'True') {
 
                 setListaPeliculas(data.Search)
+                setTitulo2(titulo)
                 setTitulo('')
    
             } else {
@@ -117,7 +119,7 @@ const BuscadorProvider = ({children}) => {
     }
 
   return (
-    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal, modalError, cerrarModalError, focusInput, loading}}>
+    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal, modalError, cerrarModalError, focusInput, loading, titulo2}}>
         {children}
     </BuscadorContext.Provider>
   )
