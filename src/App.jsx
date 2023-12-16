@@ -4,34 +4,38 @@ import useBuscadorContext from "./hooks/useBuscadorContext"
 import ModalPelicula from "./components/ModalPelicula"
 import PaginaPrincipal from "./components/PaginaPrincipal"
 import ModalError from "./components/ModalError"
+import Spinner from "./components/Spinner"
 
 function App() {
 
-  const {modal, listaPeliculas, modalError} = useBuscadorContext()
+  const {modal, listaPeliculas, modalError, loading} = useBuscadorContext()
 
   return (
     <>
       <Navbar />
-      <main>
         {
-
-          listaPeliculas.length > 0 ? (
-
-            <ListaResultados />
-
-          ) : (
-
-            <PaginaPrincipal />
-
-          )
+          loading && <Spinner />
         }
-        {
-          modalError && <ModalError />
-        }
-        {
-          modal && <ModalPelicula />
-        }
-      </main>
+        <main>
+          {
+
+            listaPeliculas.length > 0 ? (
+
+              <ListaResultados />
+
+            ) : (
+
+              <PaginaPrincipal />
+
+            )
+          }
+          {
+            modalError && <ModalError />
+          }
+          {
+            modal && <ModalPelicula />
+          }
+        </main>
     </>
   )
 }

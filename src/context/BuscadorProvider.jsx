@@ -12,8 +12,11 @@ const BuscadorProvider = ({children}) => {
     const [error, setError] = useState(false)
     const [generos, setGeneros] = useState([])
     const [modalError, setModalError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const buscarPelicula = async () => {
+
+        setLoading(true)
 
         try {
 
@@ -36,6 +39,8 @@ const BuscadorProvider = ({children}) => {
             console.log(error)
 
         }
+
+        setLoading(false)
 
     }
 
@@ -61,6 +66,8 @@ const BuscadorProvider = ({children}) => {
 
     const obtenerDatosPelicula = async (Title) => {
 
+        setLoading(true)
+
         try {
 
             const url = `https://www.omdbapi.com/?apikey=2e149a4c&t=${Title}`
@@ -77,6 +84,8 @@ const BuscadorProvider = ({children}) => {
             console.log(error)
 
         }
+
+        setLoading(false)
 
     }
 
@@ -108,7 +117,7 @@ const BuscadorProvider = ({children}) => {
     }
 
   return (
-    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal, modalError, cerrarModalError, focusInput}}>
+    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal, modalError, cerrarModalError, focusInput, loading}}>
         {children}
     </BuscadorContext.Provider>
   )

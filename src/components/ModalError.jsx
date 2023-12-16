@@ -7,7 +7,7 @@ const ModalError = () => {
   return (
     <div className='modal'>
         <div className='modal-content'>
-            <p className="message-error">No se han encontrado resultados para <span>"{titulo}"</span></p>
+            <p className="message-error">No se han encontrado resultados para <span>"{titulo}"</span>.</p>
             <button
                 className="close-btn"
                 type="button"
