@@ -26,7 +26,7 @@ const ModalPelicula = () => {
         {
           generos.map( genero => (
 
-            <p>{genero}</p>
+            <p key={genero}>{genero}</p>
 
           ))
         }
