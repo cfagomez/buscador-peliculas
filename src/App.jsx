@@ -3,19 +3,31 @@ import ListaResultados from "./components/ListaResultados"
 import useBuscadorContext from "./hooks/useBuscadorContext"
 import ModalPelicula from "./components/ModalPelicula"
 import PaginaPrincipal from "./components/PaginaPrincipal"
+import ModalError from "./components/ModalError"
 
 function App() {
 
-  const {modal, listaPeliculas} = useBuscadorContext()
+  const {modal, listaPeliculas, modalError} = useBuscadorContext()
 
   return (
     <>
       <Navbar />
       <main>
         {
-          listaPeliculas.length == 0 && <PaginaPrincipal />
+
+          listaPeliculas.length > 0 ? (
+
+            <ListaResultados />
+
+          ) : (
+
+            <PaginaPrincipal />
+
+          )
         }
-        <ListaResultados />   
+        {
+          modalError && <ModalError />
+        }
         {
           modal && <ModalPelicula />
         }

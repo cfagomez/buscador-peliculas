@@ -11,6 +11,7 @@ const BuscadorProvider = ({children}) => {
     const [modal, setModal] = useState(false)
     const [error, setError] = useState(false)
     const [generos, setGeneros] = useState([])
+    const [modalError, setModalError] = useState(false)
 
     const buscarPelicula = async () => {
 
@@ -18,7 +19,17 @@ const BuscadorProvider = ({children}) => {
 
             const url = `https://www.omdbapi.com/?apikey=2e149a4c&s=${titulo}`
             const {data} = await axios(url)
-            setListaPeliculas(data.Search)
+
+            if (data.Response === 'True') {
+
+                setListaPeliculas(data.Search)
+                setTitulo('')
+   
+            } else {
+
+                setModalError(true)
+
+            }
 
         } catch (error) {
 
@@ -43,7 +54,6 @@ const BuscadorProvider = ({children}) => {
             buscarPelicula()
 
             setError('')
-            setTitulo('')
 
         }
 
@@ -82,8 +92,23 @@ const BuscadorProvider = ({children}) => {
 
     }
 
+    const cerrarModalError = () => {
+
+        setTitulo('')
+        setModalError(false)
+
+    }
+
+    const focusInput = () => {
+
+        const buscador = document.getElementById('buscador')
+
+        buscador.focus()
+
+    }
+
   return (
-    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal}}>
+    <BuscadorContext.Provider value={{titulo, validarFormulario, handleChangeTitulo, listaPeliculas, obtenerDatosPelicula, datosPelicula, modal, error, generos, cerrarModal, modalError, cerrarModalError, focusInput}}>
         {children}
     </BuscadorContext.Provider>
   )

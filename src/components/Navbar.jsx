@@ -5,10 +5,12 @@ const Navbar = () => {
 
     const {titulo, validarFormulario, handleChangeTitulo, error} = useBuscadorContext()
 
+    const buscador = document.getElementById("buscador")
+
   return (
     <nav>
         <a 
-            href="#"
+            href="index"
             className='logo'
         >
             Minamón
@@ -29,7 +31,8 @@ const Navbar = () => {
                     )
                 }
                 <input 
-                    type="text" 
+                    type="text"
+                    id='buscador'
                     placeholder='Buscar...'
                     value={titulo}
                     onChange={handleChangeTitulo}
