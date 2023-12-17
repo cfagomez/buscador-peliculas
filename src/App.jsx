@@ -5,6 +5,7 @@ import ModalPelicula from "./components/ModalPelicula"
 import PaginaPrincipal from "./components/PaginaPrincipal"
 import ModalError from "./components/ModalError"
 import Spinner from "./components/Spinner"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
             modal && <ModalPelicula />
           }
         </main>
+        <Footer />
     </>
   )
 }
