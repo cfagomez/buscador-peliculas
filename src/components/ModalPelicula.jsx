@@ -10,11 +10,47 @@ const ModalPelicula = () => {
     <div className='modal'>
       <div className='modal-content'>
         <p className='title'>{Title}</p>
-        <p className='rating'>{imdbRating}</p>
+        {
+
+          imdbRating === "N/A" ? (
+
+            null
+
+          ) : (
+
+            <p className='rating'>{imdbRating}</p>
+
+          )
+
+        }
         <div className='datos-container'>
-            <p>{Year} ·</p>
-            <p>{Rated} ·</p>
-            <p>{Runtime}</p>
+            <p>{Year}</p>
+            {
+
+              Rated === "N/A" ? (
+
+                null
+
+              ) : (
+
+                <p>{Rated}</p>
+
+              )
+
+            }
+            {
+
+              Runtime === "N/A" ? (
+
+                null
+
+              ) : (
+
+                <p>{Runtime}</p>
+
+              )
+
+            }  
         </div>
         <img 
           src={Poster} 
@@ -32,13 +68,61 @@ const ModalPelicula = () => {
         }
         </div>
         <div className='datos-container-2'>
-          <p className='plot'>{Plot}</p>
+          {
+
+            Plot === "N/A" ? (
+
+              <p className='datos-error'>No se ha encontrado una descripción sobre la trama.</p>
+
+            ) : (
+
+              <p className='plot'>{Plot}</p>
+
+            )
+
+          }
           <hr />
-          <p>Dirección: <span>{Director}</span></p>
+          <p>Dirección: {
+            
+            Director === "N/A" ? (
+
+              <span className='datos-error'>No se ha encontrado una descripción sobre la trama.</span>
+
+            ) : (
+
+              {Director}
+
+            )
+            
+          }</p>         
           <hr />
-          <p>Guionista: <span>{Writer}</span></p>
+          {
+
+            Writer === "N/A" ? (
+
+              null
+
+            ) : (
+
+              <p>Guionista: <span>{Writer}</span></p>
+
+            )
+
+          }
           <hr />
-          <p>Elenco: <span>{Actors}</span></p>
+          {
+
+            Actors === "N/A" ? (
+
+              null
+
+            ) : (
+
+              <p>Elenco: <span>{Actors}</span></p>
+
+            )
+
+          }
         </div>
         <button 
           className='close-btn'

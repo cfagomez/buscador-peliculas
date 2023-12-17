@@ -99,6 +99,26 @@ nav input[type="submit"]:hover {
 
 }
 
+@media (max-width: 768px) {
+  
+  nav, form, .logo {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+  }
+
+  input[type="text"], nav input[type="submit"], .error-message-container {
+
+    width: 75%;
+    margin: auto;
+
+  }
+
+}
+
 /* PAGINA PRINCIPAL */
 
 .pagina-principal-container {
@@ -165,6 +185,30 @@ nav input[type="submit"]:hover {
 .inst-4 {
 
   color: rgb(253, 21, 27);
+
+}
+
+@media (max-width: 768px) {
+
+  .pagina-principal-container {
+
+    width: 75%;
+
+  }
+
+  .pagina-principal-container h2 {
+
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+    line-height: 1;
+
+  }
+
+  .pagina-principal-container p, .inst-1 {
+
+    font-size: 1rem;
+
+  }
 
 }
 
@@ -292,6 +336,54 @@ nav input[type="submit"]:hover {
 
 }
 
+@media (max-width: 768px) {
+
+  .resultado-container {
+
+    flex-direction: column;
+
+  }
+
+  .btn-ver-mas {
+
+    width: 100%;
+    margin: auto;
+
+  }
+
+  .p-title, .p-type, .p-year {
+
+    display: none;
+
+  }
+
+  .informacion-container {
+
+    justify-content: center;
+
+  }
+
+  .informacion-container img {
+
+    width: 200px;
+    height: 300px;
+
+  }
+
+  .p-resultados-container {
+
+    width: 100%;
+
+  }
+
+  .p-resultados {
+
+    text-align: center;
+
+  }
+  
+}
+
 /* MODAL PELICULA */
 
 .modal {
@@ -397,16 +489,26 @@ img {
 
 .plot {
 
-  font-weight: 700;
   margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+
+}
+
+.datos-error {
+
+  display: inline-block;
+  margin: 0;
+  color:  rgb(175, 175, 170);
+  font-weight: 700;
   line-height: 1.6;
 
 }
 
-.datos-container-2 p {
+.datos-container-2 {
 
-font-weight: 700;
-color: rgb(0, 0, 0);
+  margin-top: 20px;
 
 }
 
