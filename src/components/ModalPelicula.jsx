@@ -72,7 +72,7 @@ const ModalPelicula = () => {
 
             Plot === "N/A" ? (
 
-              <p className='datos-error'>No se ha encontrado una descripción sobre la trama.</p>
+              <p className='datos-error'>No se ha encontrado información.</p>
 
             ) : (
 
@@ -82,47 +82,47 @@ const ModalPelicula = () => {
 
           }
           <hr />
-          <p>Dirección: {
+          <p>Director: {
             
             Director === "N/A" ? (
 
-              <span className='datos-error'>No se ha encontrado una descripción sobre la trama.</span>
+              <span className='datos-error'>No se ha encontrado información.</span>
 
             ) : (
 
-              {Director}
+              <span className='director'>{Director}</span>
 
             )
-            
-          }</p>         
+          
+          }</p>
           <hr />
-          {
-
+          <p>Guionista: {
+            
             Writer === "N/A" ? (
 
-              null
+              <span className='datos-error'>No se ha encontrado información.</span>
 
             ) : (
 
-              <p>Guionista: <span>{Writer}</span></p>
+              <span className='guionista'>{Writer}</span>
 
             )
-
-          }
+          
+          }</p>
           <hr />
-          {
-
+          <p>Elenco: {
+            
             Actors === "N/A" ? (
 
-              null
+              <span className='datos-error'>No se ha encontrado información.</span>
 
             ) : (
 
-              <p>Elenco: <span>{Actors}</span></p>
+              <span className='elenco'>{Actors}</span>
 
             )
-
-          }
+          
+          }</p>
         </div>
         <button 
           className='close-btn'

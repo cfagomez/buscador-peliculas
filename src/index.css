@@ -192,7 +192,7 @@ nav input[type="submit"]:hover {
 
   .pagina-principal-container {
 
-    width: 75%;
+    width: 100%;
 
   }
 
@@ -341,6 +341,7 @@ nav input[type="submit"]:hover {
   .resultado-container {
 
     flex-direction: column;
+    justify-content: center;
 
   }
 
@@ -360,6 +361,7 @@ nav input[type="submit"]:hover {
   .informacion-container {
 
     justify-content: center;
+    gap: 0;
 
   }
 
@@ -512,7 +514,7 @@ img {
 
 }
 
-.datos-container-2 span {
+.director, .elenco, .guionista {
 
   color: rgb(67,127,151);
 
@@ -542,6 +544,23 @@ img {
 
 }
 
+@media (max-width: 768px) {
+
+  .modal {
+
+    padding: 0;
+
+  }
+
+  .modal-content {
+
+    width: 100%;
+    padding: 12.5px 12.5px;
+
+  }
+
+}
+
 /* MODAL ERROR */
 
 .message-error {
@@ -556,6 +575,16 @@ img {
 
   font-weight: 900;
 
+}
+
+@media (max-width: 768px) {
+
+  .modal-content-w-75 {
+
+    width: 75%;
+
+  }
+  
 }
 
 /* SPINNER */

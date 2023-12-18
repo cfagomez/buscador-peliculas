@@ -10,7 +10,7 @@ const Resultado = ({pelicula}) => {
       <div className="informacion-container">
         <img 
           src={Poster} 
-          alt={`Poster ${Title}`}
+          alt={`Póster ${Title}`}
           width="150"
           height="200"
         />
